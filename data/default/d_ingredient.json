@@ -1,0 +1,231 @@
+[
+  {
+    "_id": {
+      "$oid": "6189c14a55a34ee9bf45e3bc"
+    },
+    "_class": "ingredient",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "name": "Бисквитное тесто",
+    "description": "Laoreet mauris tincidunt egestas non malesuada mauris magna Fusce ac ipsum.",
+    "stock": 110,
+    "price": 50,
+    "picture": null,
+    "_createdAt": {
+      "$date": "2021-11-09T00:31:06.027Z"
+    },
+    "_editor": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "_updatedAt": {
+      "$date": "2021-11-09T00:56:19.542Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6189c16b55a34ee9bf45e3bd"
+    },
+    "_class": "ingredient",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "name": "Заварное тесто",
+    "description": "Nunc interdum vitae ut tellus gravida feugiat sociis leo Nullam parturient.",
+    "stock": 80,
+    "price": 70,
+    "picture": null,
+    "_createdAt": {
+      "$date": "2021-11-09T00:31:39.907Z"
+    },
+    "_editor": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "_updatedAt": {
+      "$date": "2021-11-09T00:56:00.505Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6189c19c55a34ee9bf45e3be"
+    },
+    "_class": "ingredient",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "name": "Дрожжевое тесто",
+    "description": "Tristique pellentesque quis orci id auctor Curabitur odio tortor nisl vel. Tellus Pellentesque vitae.",
+    "stock": 50,
+    "price": 100,
+    "picture": null,
+    "_createdAt": {
+      "$date": "2021-11-09T00:32:28.927Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6189c1d055a34ee9bf45e3bf"
+    },
+    "_class": "ingredient",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "name": "Песочное тесто",
+    "description": "Urna semper laoreet pharetra Curabitur Suspendisse Duis ipsum non dis sem.",
+    "stock": 15,
+    "price": 150,
+    "picture": null,
+    "_createdAt": {
+      "$date": "2021-11-09T00:33:20.501Z"
+    },
+    "_editor": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "_updatedAt": {
+      "$date": "2021-11-09T00:57:47.171Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6189c6a555a34ee9bf45e3c7"
+    },
+    "_class": "ingredient",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "name": "Шоколадная глазурь",
+    "description": "Libero leo tortor lorem justo tellus Duis vel lacus.",
+    "stock": 20,
+    "price": 30,
+    "picture": null,
+    "_createdAt": {
+      "$date": "2021-11-09T00:53:57.161Z"
+    },
+    "_editor": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "_updatedAt": {
+      "$date": "2021-11-09T00:54:27.869Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6189c6b855a34ee9bf45e3c8"
+    },
+    "_class": "ingredient",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "name": "Сахарная пудра",
+    "description": "Sed pellentesque justo Cum accumsan elit morbi sed.",
+    "stock": 100,
+    "price": 10,
+    "picture": null,
+    "_createdAt": {
+      "$date": "2021-11-09T00:54:16.370Z"
+    },
+    "_editor": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "_updatedAt": {
+      "$date": "2021-11-09T00:54:43.710Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6189c76355a34ee9bf45e3ca"
+    },
+    "_class": "ingredient",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "name": "Мармеладное желе",
+    "description": "In tellus Curabitur cursus nisl senectus id felis risus adipiscing.",
+    "stock": 25,
+    "price": 80,
+    "picture": null,
+    "_createdAt": {
+      "$date": "2021-11-09T00:57:07.545Z"
+    },
+    "_editor": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "_updatedAt": {
+      "$date": "2021-11-09T00:57:41.438Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6189c77d55a34ee9bf45e3cb"
+    },
+    "_class": "ingredient",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "name": "Сметанный крем",
+    "description": "Orci vitae tincidunt congue tellus et nibh justo tortor id nisl.",
+    "stock": 10,
+    "price": 90,
+    "picture": null,
+    "_createdAt": {
+      "$date": "2021-11-09T00:57:33.298Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6189c7ff55a34ee9bf45e3cd"
+    },
+    "_class": "ingredient",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "name": "Фруктовое пюре",
+    "description": "Vestibulum amet netus wisi Pellentesque mi eros Curabitur lorem.",
+    "stock": 35,
+    "price": 45,
+    "picture": null,
+    "_createdAt": {
+      "$date": "2021-11-09T00:59:43.600Z"
+    },
+    "_editor": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "_updatedAt": {
+      "$date": "2021-11-09T01:02:00.626Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6189c82455a34ee9bf45e3ce"
+    },
+    "_class": "ingredient",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "name": "Ванильные сливки",
+    "description": "Pellentesque convallis quis porta urna.",
+    "stock": 5,
+    "price": 80,
+    "picture": null,
+    "_createdAt": {
+      "$date": "2021-11-09T01:00:20.203Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6189c85755a34ee9bf45e3cf"
+    },
+    "_class": "ingredient",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "name": "Ореховый джем",
+    "description": "Phasellus dapibus ut pede sollicitudin Vestibulum.",
+    "stock": 45,
+    "price": 70,
+    "picture": null,
+    "_createdAt": {
+      "$date": "2021-11-09T01:01:11.624Z"
+    }
+  }
+]

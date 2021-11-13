@@ -1,0 +1,33 @@
+{
+  "label": "Список опубликованных продуктов",
+  "description": "Представление опубликованных продуктов в списке",
+  "filter": {
+    "published": true
+  },
+  "order": {
+    "orderNumber": 1
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "description",
+      "orderNumber": 20
+    },
+    {
+      "name": "stock",
+      "orderNumber": 40
+    },
+    {
+      "name": "price",
+      "orderNumber": 60
+    },
+    {
+      "name": "picture",
+      "orderNumber": 80
+    }
+  ]
+}

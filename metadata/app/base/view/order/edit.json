@@ -1,0 +1,32 @@
+{
+  "label": "Редактировать",
+  "description": "Представление создания объекта",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "_state",
+      "orderNumber": 10
+    },
+    {
+      "name": "customer",
+      "orderNumber": 20
+    },
+    {
+      "name": "_createdAt",
+      "orderNumber": 30
+    },
+    {
+      "name": "items",
+      "listView": "listInOrder",
+      "orderNumber": 40
+    },
+    {
+      "name": "price",
+      "orderNumber": 50
+    },
+    {
+      "name": "_updatedAt",
+      "orderNumber": 70
+    }
+  ]
+}

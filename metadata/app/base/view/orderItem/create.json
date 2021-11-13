@@ -1,0 +1,23 @@
+{
+  "label": "Создать",
+  "description": "Представление создания объекта",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "order",
+      "orderNumber": 10
+    },
+    {
+      "name": "product",
+      "orderNumber": 20
+    },
+    {
+      "name": "quantity",
+      "orderNumber": 30
+    },
+    {
+      "name": "ingredients",
+      "orderNumber": 40
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "label": "Главная",
+  "description": "Главная секция меню",
+  "nodes": [
+    {
+      "name": "newOrders",
+      "label": "Новые заказы",
+      "orderNumber": 10,
+      "class": "order",
+      "view": "new"
+    },
+    {
+      "name": "cookingOrders",
+      "label": "Готовящиеся заказы",
+      "description": "Заказы в процессе приготовления",
+      "orderNumber": 20,
+      "class": "order",
+      "view": "cooking"
+    },
+    {
+      "name": "allOrders",
+      "label": "Все заказы",
+      "orderNumber": 30,
+      "class": "order"
+    },
+    {
+      "name": "separator1",
+      "label": "---",
+      "description": "Разделитель пунктов меню",
+      "orderNumber": 40,
+      "type": "divider"
+    },
+    {
+      "name": "publishedProducts",
+      "label": "Опубликованные продукты",
+      "orderNumber": 50,
+      "class": "product",
+      "view": "publicList"
+    },
+    {
+      "name": "allProducts",
+      "label": "Все продукты",
+      "orderNumber": 60,
+      "class": "product",
+      "view": "list"
+    },
+    {
+      "name": "separator2",
+      "label": "---",
+      "description": "Разделитель пунктов меню",
+      "orderNumber": 70,
+      "type": "divider"
+    },
+    {
+      "name": "customers",
+      "label": "Заказчики",
+      "orderNumber": 80,
+      "class": "customer"
+    }
+  ]
+}

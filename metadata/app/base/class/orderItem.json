@@ -1,0 +1,206 @@
+{
+  "abstract": false,
+  "description": "Элемент заказа клиента",
+  "label": "Элемент заказа",
+  "attrs": [
+    {
+      "name": "order",
+      "label": "Заказ",
+      "type": "ref",
+      "viewType": "relationSelect",
+      "commands": [
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "onDelete": "cascade",
+      "orderNumber": 10,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "order",
+      "readOnly": true,
+      "required": true,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "custom",
+          "orderNumber": 10,
+          "description": "Проверить максимальное количество элементов одного заказа",
+          "config": {
+            "Class": "component/meta/validator/OrderItem",
+            "maxItems": 5
+          }
+        }
+      ]
+    },
+    {
+      "name": "product",
+      "label": "Продукт",
+      "type": "ref",
+      "viewType": "relationSelect",
+      "commands": [
+        "add",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": true,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "onDelete": "cascade",
+      "orderNumber": 20,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "product",
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "condition",
+          "orderNumber": 20,
+          "description": "Проверить доступность продукта для заказа",
+          "message": "Продукт недоступен для заказа",
+          "condition": [
+            "$=",
+            ".product.published",
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "name": "quantity",
+      "label": "Количество",
+      "type": "integer",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "defaultValue": 1,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 30,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "number",
+          "orderNumber": 10,
+          "integerOnly": true,
+          "max": 10,
+          "min": 1
+        },
+        {
+          "type": "custom",
+          "orderNumber": 20,
+          "description": "Проверить наличие товара",
+          "config": {
+            "Class": "component/meta/validator/OrderItemQuantity"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ingredients",
+      "label": "Ингредиенты",
+      "type": "ref",
+      "commands": [
+        "add",
+        "remove",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": true,
+      "onDelete": "null",
+      "options": {
+        "relation": {
+          "depends": "product"
+        }
+      },
+      "orderNumber": 40,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "ingredient",
+      "readOnly": false,
+      "required": false,
+      "selectListView": "select",
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "custom",
+          "orderNumber": 10,
+          "description": "Проверить правильность ингредиентов в выбранном продукте",
+          "config": {
+            "Class": "component/meta/validator/OrderItemIngredients"
+          }
+        }
+      ]
+    },
+    {
+      "name": "price",
+      "label": "Цена",
+      "type": "float",
+      "description": "Цена на момент создания заказа",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 50,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    }
+  ],
+  "behaviors": [
+    {
+      "type": "custom",
+      "orderNumber": 10,
+      "description": "Установить цену элемента заказа и изменить запас продукта (ингредиентов)",
+      "config": {
+        "Class": "component/meta/behavior/OrderItemBehavior"
+      }
+    }
+  ]
+}

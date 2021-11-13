@@ -1,0 +1,26 @@
+{
+  "label": "Список выбора",
+  "description": "Представление списка ингредиентов для выбора по продукту",
+  "filter": {
+    "$key": "$dependency.product.ingredientLists.ingredients"
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "description",
+      "orderNumber": 20
+    },
+    {
+      "name": "stock",
+      "orderNumber": 30
+    },
+    {
+      "name": "price",
+      "orderNumber": 40
+    }
+  ]
+}

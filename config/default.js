@@ -2,31 +2,25 @@
 
 module.exports = {
 
-    title: 'Boilerplate',
+    title: 'Пекарня',
 
     components: {
         'db': {
             settings: {
-                'database': process.env.MONGO_NAME || 'evado-boilerplate',
+                'database': process.env.MONGO_NAME || 'bakery-ru',
             }
         },
         'cookie': {
-            secret: 'boilerplate.evado.sign' // key to sign cookie
+            secret: 'bakery-ru.evado.sign' // key to sign cookie
         },
         'session': {
-            secret: 'boilerplate.evado.sign'  // key to sign session ID cookie
+            secret: 'bakery-ru.evado.sign'  // key to sign session ID cookie
         },
         'i18n': {
-            language: 'en'
+            language: 'ru'
         },
         'router': {
-            // defaultModule: 'office'
-        },
-        's3Storage': {
-            Class: require('evado/component/file/S3Storage'),
-            accessKey: 'minioadmin',
-            secretKey: 'minioadmin',
-            bucket: 'test'
+            defaultModule: 'front'
         }
     },
     metaModels: {
@@ -54,13 +48,16 @@ module.exports = {
             Class: require('evado-module-studio/Module')
         },
         'office': {
-            Class: require('../module/office/Module')
+            Class: require('evado-module-office/Module')
         },
         'account': {
             Class: require('evado-module-account/Module')
         },
         'admin': {
             Class: require('evado-module-admin/Module')
+        },
+        'front': {
+            Class: require('../module/front/Module')
         }
     },
     users: require('./default-users'),
@@ -75,8 +72,8 @@ module.exports = {
     params: {
         'enablePasswordChange': true,
         'enablePasswordReset': false,
-        'enableSignUp': false,
+        'enableSignUp': true,
         'enableSignUpVerification': false,
-        'languageToggle': false
+        'languageToggle': true
     }
 };

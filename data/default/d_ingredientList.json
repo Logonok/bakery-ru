@@ -1,0 +1,155 @@
+[
+  {
+    "_id": {
+      "$oid": "6189c55755a34ee9bf45e3c0"
+    },
+    "_class": "ingredientList",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "required": true,
+    "name": "Дрожжевое или песочное тесто",
+    "description": "",
+    "ingredients": [
+      {
+        "$oid": "6189c19c55a34ee9bf45e3be"
+      },
+      {
+        "$oid": "6189c1d055a34ee9bf45e3bf"
+      }
+    ],
+    "_createdAt": {
+      "$date": "2021-11-09T00:48:23.295Z"
+    },
+    "_editor": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "_updatedAt": {
+      "$date": "2021-11-09T00:52:59.398Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6189c58155a34ee9bf45e3c1"
+    },
+    "_class": "ingredientList",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "required": true,
+    "name": "Бисквитное или заварное тесто",
+    "description": "",
+    "ingredients": [
+      {
+        "$oid": "6189c14a55a34ee9bf45e3bc"
+      },
+      {
+        "$oid": "6189c16b55a34ee9bf45e3bd"
+      }
+    ],
+    "_createdAt": {
+      "$date": "2021-11-09T00:49:05.354Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6189c59055a34ee9bf45e3c2"
+    },
+    "_class": "ingredientList",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "required": true,
+    "name": "Тесто",
+    "description": "",
+    "ingredients": [
+      {
+        "$oid": "6189c14a55a34ee9bf45e3bc"
+      },
+      {
+        "$oid": "6189c16b55a34ee9bf45e3bd"
+      },
+      {
+        "$oid": "6189c19c55a34ee9bf45e3be"
+      },
+      {
+        "$oid": "6189c1d055a34ee9bf45e3bf"
+      }
+    ],
+    "_createdAt": {
+      "$date": "2021-11-09T00:49:20.461Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6189c70755a34ee9bf45e3c9"
+    },
+    "_class": "ingredientList",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "required": false,
+    "name": "Присыпка",
+    "description": "Risus convallis massa sodales in quam Aenean Vestibulum vel consequat id.",
+    "ingredients": [
+      {
+        "$oid": "6189c6a555a34ee9bf45e3c7"
+      },
+      {
+        "$oid": "6189c6b855a34ee9bf45e3c8"
+      }
+    ],
+    "_createdAt": {
+      "$date": "2021-11-09T00:55:35.835Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6189c7c755a34ee9bf45e3cc"
+    },
+    "_class": "ingredientList",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "required": true,
+    "name": "Сметанная или мармеладная начинка",
+    "description": "",
+    "ingredients": [
+      {
+        "$oid": "6189c76355a34ee9bf45e3ca"
+      },
+      {
+        "$oid": "6189c77d55a34ee9bf45e3cb"
+      }
+    ],
+    "_createdAt": {
+      "$date": "2021-11-09T00:58:47.183Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "6189c87b55a34ee9bf45e3d0"
+    },
+    "_class": "ingredientList",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "required": true,
+    "name": "Начинка ассорти",
+    "description": "",
+    "ingredients": [
+      {
+        "$oid": "6189c7ff55a34ee9bf45e3cd"
+      },
+      {
+        "$oid": "6189c82455a34ee9bf45e3ce"
+      },
+      {
+        "$oid": "6189c85755a34ee9bf45e3cf"
+      }
+    ],
+    "_createdAt": {
+      "$date": "2021-11-09T01:01:47.797Z"
+    }
+  }
+]

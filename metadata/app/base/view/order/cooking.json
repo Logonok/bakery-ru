@@ -1,0 +1,26 @@
+{
+  "label": "В процессе приготовления",
+  "description": "Представление заказов в  процессе приготовления",
+  "filter": {
+    "_state": "cooking"
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "customer",
+      "orderNumber": 20
+    },
+    {
+      "name": "_createdAt",
+      "orderNumber": 30
+    },
+    {
+      "name": "price",
+      "orderNumber": 50
+    },
+    {
+      "name": "_updatedAt",
+      "orderNumber": 70
+    }
+  ]
+}

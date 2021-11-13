@@ -1,0 +1,29 @@
+{
+  "description": "Представление заказа с жадной загрузкой элементов",
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "_state",
+      "orderNumber": 10
+    },
+    {
+      "name": "_createdAt",
+      "orderNumber": 30
+    },
+    {
+      "name": "items",
+      "eagerDepth": 2,
+      "eagerLoading": true,
+      "eagerView": "listInOrder",
+      "orderNumber": 40
+    },
+    {
+      "name": "price",
+      "orderNumber": 50
+    },
+    {
+      "name": "_updatedAt",
+      "orderNumber": 70
+    }
+  ]
+}

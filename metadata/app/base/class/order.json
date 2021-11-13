@@ -1,0 +1,270 @@
+{
+  "abstract": false,
+  "description": "Заказ клиента состоит из списка элементов, каждый из которых ссылается на отдельный продукт.",
+  "label": "Заказ",
+  "attrs": [
+    {
+      "name": "_state",
+      "label": "Состояние",
+      "type": "string",
+      "viewType": "state",
+      "description": "Служебный атрибут состояния текущего заказа",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 10,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": true,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "customer",
+      "label": "Заказчик",
+      "type": "ref",
+      "viewType": "relationSelect",
+      "description": "Клиент, создавший заказ",
+      "commands": [
+        "add",
+        "remove",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "defaultValue": "$user.meta.base.customer",
+      "eagerLoading": true,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "eagerDepth": 0,
+      "onDelete": "null",
+      "orderNumber": 20,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "customer",
+      "readOnly": true,
+      "required": true,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "_createdAt",
+      "label": "Создано",
+      "type": "date",
+      "viewType": "localDatetime",
+      "description": "Дата создания объекта (служебный атрибут)",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 30,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": true,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "items",
+      "label": "Элементы",
+      "type": "backref",
+      "description": "Элементы заказа",
+      "commands": [
+        "create",
+        "edit",
+        "delete"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": true,
+      "orderNumber": 40,
+      "sortable": false,
+      "sortableRelation": false,
+      "refAttr": "order",
+      "refClass": "orderItem",
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "price",
+      "label": "Цена",
+      "type": "calc",
+      "description": "Вычисляемая общая цена всех элементов заказа",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "expression": [
+        "$+",
+        [
+          "$query",
+          "column",
+          "orderItem",
+          {
+            "key": "price"
+          },
+          {
+            "order": ".$key"
+          }
+        ]
+      ],
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 50,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": true,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "_updatedAt",
+      "label": "Изменено",
+      "type": "date",
+      "viewType": "localDatetime",
+      "description": "Дата последнего изменения объекта (служебный атрибут)",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 70,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": true,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    }
+  ],
+  "rules": [
+    {
+      "type": "custom",
+      "orderNumber": 10,
+      "description": "Создать заказ можно при отсутствии других заказов в статусах Черновик и Новый",
+      "config": {
+        "Class": "component/meta/validator/OrderCreation"
+      }
+    }
+  ],
+  "states": [
+    {
+      "name": "draft",
+      "label": "Черновик",
+      "defaults": true,
+      "description": "Заказ редактируется пользователем",
+      "readOnly": false
+    },
+    {
+      "name": "new",
+      "label": "Новый",
+      "defaults": false,
+      "description": "Заказ  сформирован",
+      "readOnly": true
+    },
+    {
+      "name": "cooking",
+      "label": "Приготовление",
+      "defaults": false,
+      "description": "Заказ в процессе выполнения",
+      "readOnly": true
+    },
+    {
+      "name": "ready",
+      "label": "Готов",
+      "defaults": false,
+      "description": "Заказ готов",
+      "readOnly": true
+    }
+  ],
+  "transitions": [
+    {
+      "name": "confirm",
+      "label": "Подтвердить",
+      "hint": "Подтвердить сформированный заказ",
+      "nullStartState": false,
+      "startStates": [
+        "draft"
+      ],
+      "finalState": "new",
+      "condition": [
+        "$>",
+        ".price",
+        0
+      ],
+      "orderNumber": 10
+    },
+    {
+      "name": "cook",
+      "label": "Начать готовить",
+      "hint": "Взять заказ в работу",
+      "nullStartState": false,
+      "startStates": [
+        "new"
+      ],
+      "finalState": "cooking",
+      "orderNumber": 20
+    },
+    {
+      "name": "modify",
+      "label": "Изменить",
+      "hint": "Вернуться к редактированию заказа",
+      "nullStartState": false,
+      "startStates": [
+        "new"
+      ],
+      "finalState": "draft",
+      "orderNumber": 30
+    },
+    {
+      "name": "complete",
+      "label": "Завершить",
+      "hint": "Завершить заказ",
+      "nullStartState": false,
+      "startStates": [
+        "cooking"
+      ],
+      "finalState": "ready",
+      "orderNumber": 40
+    }
+  ]
+}

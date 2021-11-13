@@ -16,5 +16,10 @@ module.exports = {
     }, {
         url: 'admin',
         label: 'Administration'
+    }, {
+        type: 'divider'
+    }, {
+        url: 'front',
+        label: 'Front'
     }]
 };

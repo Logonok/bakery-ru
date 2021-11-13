@@ -1,0 +1,138 @@
+[
+  {
+    "_id": {
+      "$oid": "6189bf6355a34ee9bf45e3b8"
+    },
+    "_class": "product",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "name": "Клубничный десерт",
+    "description": "Nam tempor dictum eros Proin metus In sed. Ut Sed fringilla aliquet Morbi pretium urna netus pretium nunc platea. Congue lorem porttitor.",
+    "published": true,
+    "stock": 50,
+    "price": 500,
+    "ingredientLists": [
+      {
+        "$oid": "6189c58155a34ee9bf45e3c1"
+      },
+      {
+        "$oid": "6189c7c755a34ee9bf45e3cc"
+      }
+    ],
+    "picture": {
+      "$oid": "61888bbff5cd11cfc3cf318a"
+    },
+    "_createdAt": {
+      "$date": "2021-11-09T00:22:59.751Z"
+    },
+    "_editor": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "_updatedAt": {
+      "$date": "2021-11-09T01:35:12.181Z"
+    },
+    "orderNumber": 10
+  },
+  {
+    "_id": {
+      "$oid": "6189bfd255a34ee9bf45e3b9"
+    },
+    "_class": "product",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "name": "Радужное ассорти",
+    "description": "Convallis sed Curabitur molestie tortor Nulla Donec molestie mi mi id. Phasellus vel fames dapibus faucibus Quisque lacinia convallis tempor laoreet faucibus.",
+    "published": true,
+    "stock": 100,
+    "price": 400,
+    "ingredientLists": [
+      {
+        "$oid": "6189c55755a34ee9bf45e3c0"
+      },
+      {
+        "$oid": "6189c70755a34ee9bf45e3c9"
+      },
+      {
+        "$oid": "6189c87b55a34ee9bf45e3d0"
+      }
+    ],
+    "picture": {
+      "$oid": "61888be9f5cd11cfc3cf3190"
+    },
+    "_createdAt": {
+      "$date": "2021-11-09T00:24:50.674Z"
+    },
+    "_editor": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "_updatedAt": {
+      "$date": "2021-11-09T01:35:26.703Z"
+    },
+    "orderNumber": 30
+  },
+  {
+    "_id": {
+      "$oid": "6189c01655a34ee9bf45e3ba"
+    },
+    "_class": "product",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "name": "Кремовые ежики",
+    "description": "Lorem ipsum dolor sit amet consectetuer nascetur nisl Cras pellentesque metus. In vitae Vestibulum justo fames faucibus at faucibus turpis et ut.",
+    "published": true,
+    "stock": 50,
+    "price": 300,
+    "ingredientLists": [
+      {
+        "$oid": "6189c59055a34ee9bf45e3c2"
+      },
+      {
+        "$oid": "6189c70755a34ee9bf45e3c9"
+      }
+    ],
+    "picture": {
+      "$oid": "61888bd4f5cd11cfc3cf318d"
+    },
+    "_createdAt": {
+      "$date": "2021-11-09T00:25:58.032Z"
+    },
+    "_editor": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "_updatedAt": {
+      "$date": "2021-11-09T01:35:21.137Z"
+    },
+    "orderNumber": 20
+  },
+  {
+    "_id": {
+      "$oid": "6189c04d55a34ee9bf45e3bb"
+    },
+    "_class": "product",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "name": "Сладкая радость",
+    "description": "Nam ante Maecenas sagittis urna auctor risus convallis Maecenas nibh quis.",
+    "published": false,
+    "stock": 20,
+    "price": 150,
+    "ingredientLists": [],
+    "picture": {
+      "$oid": "61888c18f5cd11cfc3cf3196"
+    },
+    "_createdAt": {
+      "$date": "2021-11-09T00:26:53.574Z"
+    },
+    "_editor": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "_updatedAt": {
+      "$date": "2021-11-09T01:35:35.036Z"
+    },
+    "orderNumber": 40
+  }
+]

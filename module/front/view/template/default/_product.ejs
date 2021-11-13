@@ -1,0 +1,125 @@
+
+<div class="page" data-page="product" data-handler="ProductPage">
+
+    <div class="product-model loadable-container" data-handler="Product">
+
+        <template data-id="product">
+            <div class="page-head">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" data-action="main">Главная</a></li>
+                    <li class="breadcrumb-item" data-t="">Продукт</li>
+                </ol>
+                <%- include('./_user') %>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="product-title">{{_title}}</h1>
+                    <h4 class="product-description">{{description}}</h4>
+                    <hr>
+                    <div class="row mb-4">
+                        <div class="col-sm-6">
+                            <h5>В запасе - {{stock}}</h5>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5>Базовая цена - {{price}}</h5>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-form-label col-lg-4">Заказываемое количество</label>
+                        <div class="col-lg-8">
+                            <input name="quantity" type="number" value="1" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <img data-src="<%- _url('/api/base/file/thumbnail') %>?s=md&c=picture&id={{picture}}"
+                         class="img-thumbnail img-fluid" alt="">
+                </div>
+            </div>
+
+            {{requiredIngredientGroup}}
+            {{optionalIngredientGroup}}
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row mb-4">
+                        <label class="col-form-label col-3">Общая цена</label>
+                        <div class="col-9">
+                            <p class="form-control-plaintext">
+                                <b data-id="totalPrice">-</b>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-md-3">
+                            <button type="button" class="btn-success btn" data-command="order">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </template>
+
+        <template data-id="ingredientGroup">
+            <div class="ingredient-group" data-required="{{required}}">
+                <h4 class="ingredient-group-head">{{title}}</h4>
+                <div class="ingredient-group-body">
+                    <div class="row">
+                        {{content}}
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template data-id="ingredientList">
+            <div class="col-lg-6">
+                <div class="ingredient-list">
+                    <h5 class="ingredient-list-head">{{_title}}</h5>
+                    <div class="ingredient-list-body">
+                        {{content}}
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template data-id="ingredientItem">
+            <div class="ingredient-item row-item">
+                <div class="ingredient-item-radio cell">
+                    <label>
+                        <input type="radio" name="{{list}}" value="{{_id}}"
+                               data-title="{{_title}}"
+                               data-price="{{price}}"
+                               data-stock="{{stock}}">
+                        <b>{{_title}}</b>
+                    </label>
+                </div>
+                <div class="ingredient-item-stock cell">
+                    <div class="label">Запас</div>
+                    <div class="value">{{stock}}</div>
+                </div>
+                <div class="ingredient-item-price cell">
+                    <div class="label">Цена</div>
+                    <div class="value">{{price}}</div>
+                </div>
+            </div>
+        </template>
+
+        <template data-id="emptyIngredientItem">
+            <div class="ingredient-item row-item">
+                <div class="ingredient-item-radio cell">
+                    <label>
+                        <input type="radio" name="{{list}}" value="" checked>
+                        Не выбрано
+                    </label>
+                </div>
+            </div>
+        </template>
+
+        <template data-id="error">
+            <div class="alert-danger alert">{{text}}</div>
+        </template>
+
+        <div class="loadable-content"></div>
+        <div class="loader"><i class="fa fa-spinner fa-spin"></i></div>
+    </div>
+</div>

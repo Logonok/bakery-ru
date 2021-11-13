@@ -1,0 +1,92 @@
+[
+  {
+    "_id": {
+      "$oid": "61888bb1f5cd11cfc3cf3189"
+    },
+    "file": "2021-11/61888bb1f5cd11cfc3cf3188",
+    "name": "pie1.jpg",
+    "size": 24260,
+    "type": "image/jpeg",
+    "createdAt": {
+      "$date": "2021-11-08T02:30:09.494Z"
+    },
+    "creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "owner": {
+      "$oid": "61888bbff5cd11cfc3cf318a"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61888bcff5cd11cfc3cf318c"
+    },
+    "file": "2021-11/61888bcff5cd11cfc3cf318b",
+    "name": "pie7.jpg",
+    "size": 17266,
+    "type": "image/jpeg",
+    "createdAt": {
+      "$date": "2021-11-08T02:30:39.317Z"
+    },
+    "creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "owner": {
+      "$oid": "61888bd4f5cd11cfc3cf318d"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61888be4f5cd11cfc3cf318f"
+    },
+    "file": "2021-11/61888be4f5cd11cfc3cf318e",
+    "name": "pie2.jpg",
+    "size": 42384,
+    "type": "image/jpeg",
+    "createdAt": {
+      "$date": "2021-11-08T02:31:00.211Z"
+    },
+    "creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "owner": {
+      "$oid": "61888be9f5cd11cfc3cf3190"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61888bf6f5cd11cfc3cf3192"
+    },
+    "file": "2021-11/61888bf6f5cd11cfc3cf3191",
+    "name": "pie4.jpg",
+    "size": 18633,
+    "type": "image/jpeg",
+    "createdAt": {
+      "$date": "2021-11-08T02:31:18.228Z"
+    },
+    "creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "owner": {
+      "$oid": "61888bfef5cd11cfc3cf3193"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61888c11f5cd11cfc3cf3195"
+    },
+    "file": "2021-11/61888c11f5cd11cfc3cf3194",
+    "name": "pie5.jpg",
+    "size": 15509,
+    "type": "image/jpeg",
+    "createdAt": {
+      "$date": "2021-11-08T02:31:45.894Z"
+    },
+    "creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "owner": {
+      "$oid": "61888c18f5cd11cfc3cf3196"
+    }
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "label": "Список в заказе",
+  "description": "Представление списка элементов в заказе",
+  "order": {
+    "$key": -1
+  },
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "product",
+      "orderNumber": 20
+    },
+    {
+      "name": "ingredients",
+      "eagerLoading": true,
+      "orderNumber": 30
+    },
+    {
+      "name": "quantity",
+      "orderNumber": 40
+    },
+    {
+      "name": "price",
+      "orderNumber": 50
+    }
+  ]
+}

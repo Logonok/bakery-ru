@@ -9,21 +9,26 @@
  */
 Object.assign(Jam.I18n.defaults, {
 
+    'Delete order': 'Удалить заказ',
+    'Delete this order permanently?': 'Удалить этот заказ окончательно?',
+
+    'Invalid ingredients': 'Недопустимые ингредиенты',
+
+    'Main': 'Главная',
+
+    'Order': 'Заказ',
+    'Orders': 'Заказы',
+
+    'Out of ingredient stock': 'Недостаточно запасов ингредиентов',
+    'Out of product stock': 'Недостаточно запасов продукта',
+
+    'Remove this item from the order?': 'Удалить данный элемент из заказа?',
+
+    'Total number of order items is no more than {max}': 'Общее количество элементов заказа не больше {max}',
+
+    'You already have a pending order': 'У вас уже есть ожидающий заказ',
+    'You have no orders': 'У вас нет заказов'
 });
-
-/**
- * Define custom translation category
- *
- * Use: Jam.t('Some text', 'custom')
- * Use: <span data-t="custom">Some text</span>
- * Use: <div title="Some text" data-t="custom"></div>
- * Use: <input placeholder="Some text" type="text" data-t="custom">
- * Use: <div title="Some text" data-t-title="custom" data-t="">Text</div>
- */
-Jam.I18n.custom = {
-
-    'Some text': 'Некоторый текст'
-};
 
 // METADATA
 

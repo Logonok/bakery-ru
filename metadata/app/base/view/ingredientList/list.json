@@ -1,0 +1,19 @@
+{
+  "description": "Представление в списке",
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "required",
+      "orderNumber": 30
+    },
+    {
+      "name": "ingredients",
+      "eagerLoading": true,
+      "orderNumber": 40
+    }
+  ]
+}

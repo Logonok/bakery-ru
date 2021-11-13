@@ -1,0 +1,93 @@
+{
+  "abstract": false,
+  "description": "Изображение продукта или ингредиента",
+  "label": "Изображение",
+  "attrs": [
+    {
+      "name": "file",
+      "label": "Файл",
+      "type": "file",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "options": {
+        "thumbnail": "sm"
+      },
+      "orderNumber": 10,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "description",
+      "label": "Описание",
+      "type": "string",
+      "commonSearchable": true,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 20,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": true,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "orderNumber",
+      "label": "Порядковый номер",
+      "type": "integer",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 30,
+      "sortable": true,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "behaviors": [
+        {
+          "type": "sortOrder",
+          "orderNumber": 10,
+          "start": 10,
+          "step": 10
+        }
+      ]
+    }
+  ],
+  "behaviors": [
+    {
+      "type": "file",
+      "orderNumber": 10,
+      "imageOnly": true,
+      "maxSize": 5000000,
+      "hashing": false
+    }
+  ]
+}

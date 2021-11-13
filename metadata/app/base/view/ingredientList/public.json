@@ -1,0 +1,24 @@
+{
+  "label": "Публичный список",
+  "description": "Публичное представление списка ингредиентов",
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "description",
+      "orderNumber": 20
+    },
+    {
+      "name": "required",
+      "orderNumber": 30
+    },
+    {
+      "name": "ingredients",
+      "eagerLoading": true,
+      "orderNumber": 40
+    }
+  ]
+}

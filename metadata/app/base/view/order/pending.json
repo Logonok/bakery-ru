@@ -1,0 +1,25 @@
+{
+  "label": "Список ожидающих заказов",
+  "description": "Представление ожидающих заказов в списке",
+  "filter": {
+    "_state": [
+      "draft",
+      "new"
+    ]
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "_state",
+      "orderNumber": 10
+    },
+    {
+      "name": "_createdAt",
+      "orderNumber": 30
+    },
+    {
+      "name": "_updatedAt",
+      "orderNumber": 70
+    }
+  ]
+}

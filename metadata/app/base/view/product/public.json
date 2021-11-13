@@ -1,0 +1,37 @@
+{
+  "label": "Опубликованный продукт",
+  "description": "Представление опубликованного продукта",
+  "filter": {
+    "published": true
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "description",
+      "orderNumber": 20
+    },
+    {
+      "name": "stock",
+      "orderNumber": 40
+    },
+    {
+      "name": "price",
+      "orderNumber": 60
+    },
+    {
+      "name": "ingredientLists",
+      "eagerDepth": 2,
+      "eagerLoading": true,
+      "eagerView": "public",
+      "orderNumber": 70
+    },
+    {
+      "name": "picture",
+      "orderNumber": 80
+    }
+  ]
+}

@@ -1,15 +1,12 @@
 {
-  "name": "evado-app-boilerplate",
-  "version": "4.0.0",
-  "description": "Boilerplate App built on Evado Declarative Framework",
-  "author": "Maxim Khorin",
+  "name": "bakery-ru",
+  "version": "1.0.0",
+  "description": "Web app for creating custom bakery products from suggested ingredients",
+  "author": "Logonok",
   "license": "MIT",
-  "engines": {
-    "node": ">=16.13.0"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mkhorin/evado-app-boilerplate.git"
+    "url": "https://github.com/logonok/bakery-ru.git"
   },
   "dependencies": {
     "evado": "~5.0.0",
@@ -21,7 +18,6 @@
     "evado-module-admin": "~5.0.0",
     "evado-module-office": "~5.0.0",
     "evado-module-studio": "~5.0.0",
-    "minio": "^7.0.18",
     "sharp": "~0.29.0"
   },
   "scripts": {

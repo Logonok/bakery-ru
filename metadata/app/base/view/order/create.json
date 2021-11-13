@@ -1,0 +1,11 @@
+{
+  "label": "Создать",
+  "description": "Представление создания объекта",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "customer",
+      "orderNumber": 20
+    }
+  ]
+}

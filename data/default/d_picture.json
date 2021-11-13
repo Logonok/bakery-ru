@@ -1,0 +1,87 @@
+[
+  {
+    "_id": {
+      "$oid": "61888bbff5cd11cfc3cf318a"
+    },
+    "_class": "picture",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "orderNumber": 10,
+    "file": "2021-11/61888bb1f5cd11cfc3cf3188",
+    "description": "Продукт 1",
+    "_size": 24260,
+    "_type": "image/jpeg",
+    "_createdAt": {
+      "$date": "2021-11-08T02:30:23.226Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61888bd4f5cd11cfc3cf318d"
+    },
+    "_class": "picture",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "orderNumber": 20,
+    "file": "2021-11/61888bcff5cd11cfc3cf318b",
+    "description": "Продукт 2",
+    "_size": 17266,
+    "_type": "image/jpeg",
+    "_createdAt": {
+      "$date": "2021-11-08T02:30:44.537Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61888be9f5cd11cfc3cf3190"
+    },
+    "_class": "picture",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "orderNumber": 30,
+    "file": "2021-11/61888be4f5cd11cfc3cf318e",
+    "description": "Продукт 3",
+    "_size": 42384,
+    "_type": "image/jpeg",
+    "_createdAt": {
+      "$date": "2021-11-08T02:31:05.459Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61888bfef5cd11cfc3cf3193"
+    },
+    "_class": "picture",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "orderNumber": 40,
+    "file": "2021-11/61888bf6f5cd11cfc3cf3191",
+    "description": "Продукт 4",
+    "_size": 18633,
+    "_type": "image/jpeg",
+    "_createdAt": {
+      "$date": "2021-11-08T02:31:26.747Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61888c18f5cd11cfc3cf3196"
+    },
+    "_class": "picture",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "orderNumber": 50,
+    "file": "2021-11/61888c11f5cd11cfc3cf3194",
+    "description": "Продукт 5",
+    "_size": 15509,
+    "_type": "image/jpeg",
+    "_createdAt": {
+      "$date": "2021-11-08T02:31:52.668Z"
+    }
+  }
+]

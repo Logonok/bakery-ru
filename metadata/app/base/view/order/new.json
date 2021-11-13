@@ -1,0 +1,26 @@
+{
+  "label": "Новые заказы",
+  "description": "Представление списка новых заказов",
+  "filter": {
+    "_state": "new"
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "customer",
+      "orderNumber": 20
+    },
+    {
+      "name": "_createdAt",
+      "orderNumber": 30
+    },
+    {
+      "name": "price",
+      "orderNumber": 50
+    },
+    {
+      "name": "_updatedAt",
+      "orderNumber": 70
+    }
+  ]
+}

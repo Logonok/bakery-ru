@@ -1,0 +1,224 @@
+body {
+    --back-light: #fafaf8;
+    --navbar-color: var(--light-warning);
+    --super-navbar-color: var(--dark-warning);
+    --sidebar-width: 0;
+}
+.pagination {
+    margin-top: 30px;
+}
+.pagination > li > a {
+    padding: 6px 12px;
+}
+.super-title {
+    margin-top: 30px;
+}
+.subtitle {
+    margin: 20px 0 30px;
+    font-size: 18px;
+    color: #444;
+}
+.modal-footer {
+    text-align: center;
+}
+.block {
+    padding: 15px;
+    background: #fbfbfb;
+}
+.block-title {
+    margin: 5px 0 20px;
+}
+.tabs .nav-tabs {
+    margin: 0;
+}
+.tabs .tab-content {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 20px 15px;
+}
+.commands {
+    margin-bottom: 25px;
+}
+.container > .alert {
+    margin-top: 15px;
+}
+
+/* LOADABLE */
+
+.loadable-container {
+    position: relative;
+}
+.loadable-container > .loader {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+}
+.loadable-container.loading > .loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* PAGE */
+
+.page {
+    display: none;
+}
+.page.active {
+    display: block;
+}
+.page h1 {
+    font-size: 30px;
+    margin: 30px 0;
+}
+.page > h3 {
+    color: #888;
+}
+.page-head {
+    position: relative;
+}
+.page .icon-title h1 {
+    margin: 25px 0 10px;
+}
+.page .icon-title .img-thumbnail {
+    margin: 0 2rem 1rem 0;
+}
+
+/* BREADCRUMB */
+
+.breadcrumb {
+    padding-right: 145px;
+}
+.breadcrumb + h1 {
+    margin-top: 2rem;
+}
+
+/* ROW ITEMS */
+
+.row-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f4f4f0;
+}
+.row-item:nth-child(odd) {
+    background: #fafafa;
+}
+.row-item .cell {
+    padding: 15px;
+    overflow: hidden;
+}
+.row-item .cell label {
+    display: block;
+    color: #888;
+}
+.row-item .cell .label {
+    display: inline-block;
+    margin-right: .25rem;
+    color: #888;
+}
+.row-item .cell .value {
+    display: inline-block;
+}
+
+.product-card {
+    margin-bottom: 2.2rem;
+}
+.product-card h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+.product-card h5 {
+    line-height: 1.6rem;
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: #666;
+}
+.product-description {
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.8rem;
+}
+
+.ingredient-group {
+    margin-bottom: .5rem;
+}
+.ingredient-group-head {
+    margin-bottom: 1.2rem;
+    color: #c08;
+}
+.ingredient-list {
+    margin-bottom: 1.5rem;
+}
+.ingredient-list-head {
+    margin-bottom: 1rem;
+}
+
+.ingredient-item .ingredient-item-radio label {
+    color: #06c;
+}
+.ingredient-item-radio [type="radio"] {
+    margin-right: .35rem;
+}
+.ingredient-item-radio {
+    width: 60%;
+}
+.ingredient-item-stock {
+    width: 20%;
+}
+.ingredient-item-price {
+    width: 20%;
+}
+@media (max-width: 768px) {
+    .row-item .cell {
+        width: auto !important;
+    }
+}
+
+.order-item-picture {
+    width: 15%;
+}
+.order-item-name {
+    width: 25%;
+}
+.order-item-ingredients {
+    width: 35%;
+}
+.order-item-quantity {
+    width: 15%;
+}
+.order-item-delete {
+    width: 10%;
+}
+
+.order [data-action="deleteItem"],
+.order [data-action="deleteOrder"],
+.order [data-action="confirmOrder"],
+.order [data-action="modifyOrder"] {
+    display: none;
+}
+.order .draft [data-action="addMore"],
+.order .draft [data-action="deleteItem"],
+.order .draft [data-action="deleteOrder"],
+.order .draft[data-items="true"] [data-action="confirmOrder"],
+.order .new [data-action="modifyOrder"],
+.order .new [data-action="deleteOrder"] {
+    display: inline-block;
+}
+
+.user-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    color: #666;
+    padding: 0 12px;
+}
+.user-toggle:hover {
+    color: var(--dark-primary);
+}
