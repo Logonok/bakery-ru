@@ -196,6 +196,7 @@ body {
     width: 10%;
 }
 
+.order [data-action="addMore"],
 .order [data-action="deleteItem"],
 .order [data-action="deleteOrder"],
 .order [data-action="confirmOrder"],

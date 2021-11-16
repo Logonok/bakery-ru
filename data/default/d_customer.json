@@ -1,0 +1,18 @@
+[
+  {
+    "_id": {
+      "$oid": "618a0d565716842bc27068f3"
+    },
+    "_class": "customer",
+    "_creator": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "name": "Адам",
+    "user": {
+      "$oid": "617f79e62e3ee06680e58fda"
+    },
+    "_createdAt": {
+      "$date": "2021-11-09T00:22:59.751Z"
+    }
+  }
+]
