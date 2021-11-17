@@ -4,9 +4,9 @@
 из предложенных ингредиентов. 
 Создано на [декларативном фреймворке Evado](https://github.com/mkhorin/evado).
 
-Статья: [240 тысяч за 10 часов](https://zen.me/1KE4fbx1).
+Статья: [240 тысяч за 8 часов](https://zen.me/WDxP).
 
-[![Создание приложения без кода](doc/poster.jpg)](https://zen.me/1KE4fbx1)
+[![Создание приложения без кода](doc/poster.jpg)](https://zen.me/WDxP)
 
 ## Типовая установка
 
