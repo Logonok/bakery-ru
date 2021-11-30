@@ -1,24 +1,43 @@
 <%
 layout(_view.get('_layout/content'));
 
-script('front/vendor/front.min.js');
-script('front/script/module.js');
+script('front/vendor/vue/vue.js');
+script('front/script/breadcrumbs.js');
+script('front/script/ingredientGroup.js');
+script('front/script/ingredientList.js');
+script('front/script/order.js');
+script('front/script/orders.js');
+script('front/script/pagination.js');
+script('front/script/product.js');
+script('front/script/products.js');
+script('front/script/front.js');
 
-const dataUrl = _url('/api/base/data/');
-const metaUrl = _url('/api/base/meta/');
+const user = _controller.user;
 %>
+
+<%- include('./_breadcrumbs') %>
+<%- include('./_ingredientGroup') %>
+<%- include('./_ingredientList') %>
+<%- include('./_order') %>
+<%- include('./_orders') %>
+<%- include('./_pagination') %>
+<%- include('./_product') %>
+<%- include('./_products') %>
+
 <div class="signboard alert-warning alert">
     Модуль демонстрирует доступ к функционалу и данным приложения через AJAX-запросы
-    для создания пользовательских веб-интерфейсов.
 </div>
-<div class="front"
-     data-guest="<%- _controller.user.isGuest() %>"
-     data-user="<%- _controller.user.getId() %>"
-     data-data-url="<%- dataUrl %>"
-     data-meta-url="<%- metaUrl %>">
 
-    <%- include('./_main') %>
-    <%- include('./_product') %>
-    <%- include('./_orders') %>
-    <%- include('./_order') %>
+<div id="front"
+     data-user-id="<%- user.getId() %>"
+     data-auth-url="<%- _url('/auth/sign-in?returnUrl=/front') %>"
+     data-data-url="<%- _url('/api/base/data') %>"
+     data-thumbnail-url="<%- _url('/api/base/file/thumbnail') %>?c=picture"
+     data-csrf="<%- _controller.getCsrfToken() %>">
+
+    <products :active-page="activePage"></products>
+    <product :active-page="activePage"></product>
+    <orders :active-page="activePage"></orders>
+    <order :active-page="activePage"></order>
+
 </div>

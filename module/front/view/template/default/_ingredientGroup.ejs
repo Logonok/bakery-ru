@@ -1,0 +1,19 @@
+<!-- default/_ingredientGroup -->
+<template id="ingredient-group">
+    <div v-if="items.length" class="ingredient-group">
+        <h4 class="ingredient-group-head">{{title}}</h4>
+        <div class="ingredient-group-body">
+            <div class="row">
+                <ingredient-list
+                    v-for="item in items"
+                    ref="item"
+                    :key="item.id"
+                    :required="item.required"
+                    :id="item.id"
+                    :items="item.ingredients"
+                    :title="item.name"
+                    @change-ingredient="onChangeIngredient"></ingredient-list>
+            </div>
+        </div>
+    </div>
+</template>

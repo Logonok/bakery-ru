@@ -1,58 +1,52 @@
+<!-- default/_orders -->
+<template id="orders">
+    <div v-show="active" class="page">
 
-<div class="page" data-page="orders" data-handler="OrdersPage">
+        <breadcrumbs>
+            <template #path>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a @click.prevent="onProducts" href="#">Главная</a></li>
+                    <li class="breadcrumb-item">Заказы</li>
+                </ol>
+            </template>
+        </breadcrumbs>
 
-    <div class="page-head">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#" data-action="main" data-t="">Main</a></li>
-            <li class="breadcrumb-item" data-t="">Orders</li>
-        </ol>
-        <%- include('./_user') %>
-    </div>
+        <h1>Заказы пользователя</h1>
 
-    <h1 data-t="">Orders</h1>
+        <div class="loadable-container">
 
-    <div class="order-list loadable-container" data-handler="OrderList">
-
-        <template data-id="list">
-            <div class="order-items">{{items}}</div>
-        </template>
-
-        <template data-id="item">
-            <div class="order-item row-item" data-id="{{_id}}">
-                <div class="order-item-num cell">
-                    <label data-t="">Номер</label>
-                    <div class="value">
-                        <a href="#" data-action="order" title="{{_id}}">#{{_id}}</a>
+            <div class="order-items">
+                <div v-for="item in items" class="order-item row-item">
+                    <div class="order-item-num cell">
+                        <label>Номер</label>
+                        <div class="value">
+                            <a @click.prevent="onOrder" :data-id="item.id" href="#">#{{item.id}}</a>
+                        </div>
+                    </div>
+                    <div class="order-item-state cell">
+                        <label>Состояние</label>
+                        <div class="value">{{item.state}}</div>
+                    </div>
+                    <div class="order-item-price cell">
+                        <label>Цена</label>
+                        <div class="value">{{item.price}}</div>
+                    </div>
+                    <div class="order-item-date cell">
+                        <label>Создано</label>
+                        <div class="value">{{item.date}}</div>
                     </div>
                 </div>
-                <div class="order-item-state cell">
-                    <label data-t="">Состояние</label>
-                    <div class="value">{{state}}</div>
-                </div>
-                <div class="order-item-price cell">
-                    <label data-t="">Цена</label>
-                    <div class="value">{{price}}</div>
-                </div>
-                <div class="order-item-date cell">
-                    <label data-t="">Создано</label>
-                    <div class="value">{{date}}</div>
-                </div>
             </div>
-        </template>
 
-        <%- include('./_pagination') %>
+            <pagination></pagination>
 
-        <template data-id="empty">
-            <div class="alert-danger alert">
-                <span data-t="">You have no orders</span>
+            <div v-show="!loading && empty" class="alert-warning alert">
+                <span>Заказы не найдены</span>
             </div>
-        </template>
 
-        <template data-id="error">
-            <div class="alert-danger alert">{{text}}</div>
-        </template>
-
-        <div class="loadable-content"></div>
-        <div class="loader"><i class="fa fa-spinner fa-spin"></i></div>
+            <div v-show="loading" class="loader">
+                <i class="fa fa-spinner fa-spin"></i>
+            </div>
+        </div>
     </div>
-</div>
+</template>

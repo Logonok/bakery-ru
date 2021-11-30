@@ -1,0 +1,35 @@
+<!-- default/_products -->
+<template id="products">
+    <div v-show="active" class="page">
+
+        <breadcrumbs></breadcrumbs>
+
+        <h1>Продукты пекарни</h1>
+
+        <div class="loadable-container">
+            <div class="product-list">
+                <div class="row">
+                    <div v-for="item in items" class="col-md-6 col-lg-4">
+                        <div class="product-card">
+                            <a @click.prevent="onProduct" :data-id="item.id" href="#">
+                                <img :src="item.picture?.url" class="img-thumbnail img-fluid" alt="">
+                                <h3>{{item.name}}</h3>
+                                <h5>{{item.description}}</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <pagination></pagination>
+
+            <div v-show="!loading && empty" class="alert-warning alert">
+                <span>Продукты не найдены</span>
+            </div>
+
+            <div v-show="loading" class="loader">
+                <i class="fa fa-spinner fa-spin"></i>
+            </div>
+        </div>
+    </div>
+</template>

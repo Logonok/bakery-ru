@@ -50,28 +50,19 @@ body {
     position: relative;
 }
 .loadable-container > .loader {
-    display: none;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     z-index: 101;
-}
-.loadable-container.loading > .loader {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 /* PAGE */
 
-.page {
-    display: none;
-}
-.page.active {
-    display: block;
-}
 .page h1 {
     font-size: 30px;
     margin: 30px 0;
@@ -194,22 +185,6 @@ body {
 }
 .order-item-delete {
     width: 10%;
-}
-
-.order [data-action="addMore"],
-.order [data-action="deleteItem"],
-.order [data-action="deleteOrder"],
-.order [data-action="confirmOrder"],
-.order [data-action="modifyOrder"] {
-    display: none;
-}
-.order .draft [data-action="addMore"],
-.order .draft [data-action="deleteItem"],
-.order .draft [data-action="deleteOrder"],
-.order .draft[data-items="true"] [data-action="confirmOrder"],
-.order .new [data-action="modifyOrder"],
-.order .new [data-action="deleteOrder"] {
-    display: inline-block;
 }
 
 .user-toggle {

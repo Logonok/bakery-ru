@@ -1,0 +1,16 @@
+<!-- default/_breadcrumbs -->
+<template id="breadcrumbs">
+    <div class="page-head">
+
+        <slot name="path">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">Главная</li>
+            </ol>
+        </slot>
+
+        <div @click="onOrders" class="user-toggle" title="Заказы">
+            <span class="icon fa fa-user me-2"></span>
+            Мои заказы
+        </div>
+    </div>
+</template>
