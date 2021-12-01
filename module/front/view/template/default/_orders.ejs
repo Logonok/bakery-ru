@@ -1,11 +1,11 @@
 <!-- default/_orders -->
 <template id="orders">
-    <div v-show="active" class="page">
+    <div class="page">
 
         <breadcrumbs>
             <template #path>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a @click.prevent="onProducts" href="#">Главная</a></li>
+                    <li class="breadcrumb-item"><a @click.prevent="toProducts" href="#">Главная</a></li>
                     <li class="breadcrumb-item">Заказы</li>
                 </ol>
             </template>

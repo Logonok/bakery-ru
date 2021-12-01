@@ -2,7 +2,6 @@
 
 Vue.component('products', {
     props: {
-        activePage: String,
         pageSize: {
             type: Number,
             default: 6
@@ -15,9 +14,6 @@ Vue.component('products', {
         };
     },
     computed: {
-        active () {
-            return this.activePage === 'products';
-        },
         empty () {
             return !this.items.length;
         }
@@ -28,7 +24,7 @@ Vue.component('products', {
     },
     methods: {
         onProduct (event) {
-            this.$root.$emit('product', event.currentTarget.dataset.id);
+            this.toProduct(event.currentTarget.dataset.id);
         },
         async load (page) {
             const data = await this.fetchJson('list', {

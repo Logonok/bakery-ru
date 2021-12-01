@@ -35,9 +35,7 @@ const user = _controller.user;
      data-thumbnail-url="<%- _url('/api/base/file/thumbnail') %>?c=picture"
      data-csrf="<%- _controller.getCsrfToken() %>">
 
-    <products :active-page="activePage"></products>
-    <product :active-page="activePage"></product>
-    <orders :active-page="activePage"></orders>
-    <order :active-page="activePage"></order>
-
+    <keep-alive include="products">
+        <component :is="activePage" v-bind="activePageProps"></component>
+    </keep-alive>
 </div>

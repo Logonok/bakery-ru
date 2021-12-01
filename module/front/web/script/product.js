@@ -2,7 +2,7 @@
 
 Vue.component('product', {
     props: {
-        activePage: String
+        product: String
     },
     data () {
         return {
@@ -21,17 +21,14 @@ Vue.component('product', {
         };
     },
     computed: {
-        active () {
-            return this.activePage === 'product';
-        },
         totalPrice () {
             const total = this.price + this.requiredGroupPrice + this.optionalGroupPrice;
             return Jam.FormatHelper.asCurrency(total * this.quantity);
         }
     },
     async created () {
-        this.$root.$on('product', this.onProduct);
         this.$on('load', this.onLoad);
+        this.load(this.product);
     },
     methods: {
         onChangeRequiredIngredient (value) {
@@ -86,7 +83,7 @@ Vue.component('product', {
                     master,
                     data
                 });
-                this.$root.$emit('order', order);
+                this.toOrder(order);
             } catch (err) {
                 this.showError(err);
             }
@@ -99,7 +96,7 @@ Vue.component('product', {
         },
         waitOrder (order) {
             this.showError('Ваш текущий заказ ожидает выполнения...');
-            this.$root.$emit('order', order);
+            this.toOrder(order);
         },
         validate () {
             return this.validateQuantity()
@@ -123,9 +120,6 @@ Vue.component('product', {
         },
         validateGroup (ref) {
             return ref.validate(this.quantity);
-        },
-        onProduct (id) {
-            this.load(id);
         },
         async load (id) {
             const data = await this.fetchJson('read', {

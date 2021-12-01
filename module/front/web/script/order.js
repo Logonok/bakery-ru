@@ -2,7 +2,7 @@
 
 Vue.component('order', {
     props: {
-        activePage: String
+        order: String
     },
     data () {
         return {
@@ -15,9 +15,6 @@ Vue.component('order', {
         };
     },
     computed: {
-        active () {
-            return this.activePage === 'order';
-        },
         isDraft () {
             return this.state === 'draft';
         },
@@ -26,8 +23,8 @@ Vue.component('order', {
         }
     },
     async created () {
-        this.$root.$on('order', this.onOrder);
         this.$on('load', this.onLoad);
+        await this.reload();
     },
     methods: {
         canAddMore () {
@@ -43,7 +40,7 @@ Vue.component('order', {
             return this.isDraft || this.isNew;
         },
         onAddMore () {
-            this.$root.$emit('products');
+            this.toProducts();
         },
         onConfirm () {
             this.transit('confirm');
@@ -68,9 +65,9 @@ Vue.component('order', {
                 await Jam.dialog.confirmDeletion('Удалить этот заказ окончательно?');
                 await this.fetchText('delete', {
                     class: 'order',
-                    id: this.id
+                    id: this.order
                 });
-                this.$root.$emit('orders');
+                this.toOrders();
             } catch (err) {
                 this.showError(err);
             }
@@ -86,11 +83,8 @@ Vue.component('order', {
             });
             await this.reload();
         },
-        onOrder (id) {
-            this.load(id);
-        },
         async reload () {
-            await this.load(this.id);
+            await this.load(this.order);
         },
         async load (id) {
             const data = await this.fetchJson('read', {

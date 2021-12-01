@@ -2,7 +2,6 @@
 
 Vue.component('orders', {
     props: {
-        activePage: String,
         pageSize: {
             type: Number,
             default: 10
@@ -14,20 +13,17 @@ Vue.component('orders', {
         };
     },
     computed: {
-        active () {
-            return this.activePage === 'orders';
-        },
         empty () {
             return !this.items.length;
         }
     },
     async created () {
-        this.$root.$on('orders', this.reload.bind(this));
         this.$on('load', this.onLoad);
+        await this.reload();
     },
     methods: {
         onOrder (event) {
-            this.$root.$emit('order', event.currentTarget.dataset.id);
+            this.toOrder(event.currentTarget.dataset.id);
         },
         async reload () {
             await this.load(0);

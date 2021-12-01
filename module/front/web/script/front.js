@@ -28,10 +28,16 @@ Vue.mixin({
             const data = this.$refs[name];
             return Array.isArray(data) ? data : data ? [data] : [];
         },
-        onOrders () {
-            this.$root.$emit('orders');
+        toOrder () {
+            this.$root.$emit('order', ...arguments);
         },
-        onProducts () {
+        toOrders () {
+            this.$root.$emit('orders', ...arguments);
+        },
+        toProduct () {
+            this.$root.$emit('product', ...arguments);
+        },
+        toProducts () {
             this.$root.$emit('products');
         },
         fetchJson () {
@@ -68,19 +74,35 @@ Vue.mixin({
 const front = new Vue({
     el: '#front',
     props: {
-        'csrf': String,
-        'authUrl': String,
-        'dataUrl': String,
-        'thumbnailUrl': String,
-        'userId': String
+        csrf: String,
+        authUrl: String,
+        dataUrl: String,
+        thumbnailUrl: String,
+        userId: String
     },
     propsData: {
         ...document.querySelector('#front').dataset
     },
     data () {
         return {
-            activePage: 'products'
+            activePage: 'products',
+            activeOrder: null,
+            activeProduct: null
         };
+    },
+    computed: {
+        activePageProps () {
+            switch (this.activePage) {
+                case 'order': return {
+                    key: this.activeOrder,
+                    order: this.activeOrder
+                };
+                case 'product': return {
+                    key: this.activeProduct,
+                    product: this.activeProduct
+                };
+            }
+        }
     },
     created () {
         this.$on('products', this.onProducts);
@@ -92,17 +114,19 @@ const front = new Vue({
         onProducts () {
             this.activePage = 'products';
         },
-        onProduct () {
+        onProduct (id) {
             this.activePage = 'product';
+            this.activeProduct = id;
         },
         onOrders () {
             if (this.requireAuth()) {
                 this.activePage = 'orders';
             }
         },
-        onOrder () {
+        onOrder (id) {
             if (this.requireAuth()) {
                 this.activePage = 'order';
+                this.activeOrder = id;
             }
         }
     }
