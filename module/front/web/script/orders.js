@@ -44,7 +44,7 @@ Vue.component('orders', {
         formatItems (items) {
             return items.map(item => ({
                 id: item._id,
-                price: item.price,
+                price: Jam.FormatHelper.asCurrency(item.price),
                 state: item._state_title || item._state,
                 date: Jam.FormatHelper.asDatetime(item._createdAt)
             }));

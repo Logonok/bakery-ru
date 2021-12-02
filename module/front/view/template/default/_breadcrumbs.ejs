@@ -1,12 +1,11 @@
-<!-- default/_breadcrumbs -->
 <template id="breadcrumbs">
     <div class="page-head">
 
-        <slot name="path">
-            <ol class="breadcrumb">
+        <ol class="breadcrumb">
+            <slot name="path">
                 <li class="breadcrumb-item">Главная</li>
-            </ol>
-        </slot>
+            </slot>
+        </ol>
 
         <div @click="toOrders" class="user-toggle" title="Заказы">
             <span class="icon fa fa-user me-2"></span>

@@ -98,7 +98,7 @@ Vue.component('order', {
             this.id = data._id;
             this.state = data._state;
             this.stateTitle = data._state_title;
-            this.price = data.price;
+            this.price = Jam.FormatHelper.asCurrency(data.price);
             this.date = Jam.FormatHelper.asDatetime(data._createdAt);
             this.items = this.formatItems(data.items);
         },

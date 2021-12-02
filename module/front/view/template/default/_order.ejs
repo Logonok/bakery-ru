@@ -1,15 +1,12 @@
-<!-- default/_order -->
 <template id="order">
     <div class="page">
         <div class="order">
 
             <breadcrumbs>
                 <template #path>
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#" @click.prevent="toProducts">Главная</a></li>
-                        <li class="breadcrumb-item"><a href="#" @click.prevent="toOrders">Заказы</a></li>
-                        <li class="breadcrumb-item">#{{id}}</li>
-                    </ol>
+                    <li class="breadcrumb-item"><a href="#" @click.prevent="toProducts">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="#" @click.prevent="toOrders">Заказы</a></li>
+                    <li class="breadcrumb-item">#{{id}}</li>
                 </template>
             </breadcrumbs>
 
