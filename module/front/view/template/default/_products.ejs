@@ -10,8 +10,8 @@
                 <div class="row">
                     <div v-for="item in items" class="col-md-6 col-lg-4">
                         <div class="product-card">
-                            <a @click.prevent="onProduct" :data-id="item.id" href="#">
-                                <img :src="item.picture?.url" class="img-thumbnail img-fluid" alt="">
+                            <a @click.prevent="toProduct(item.id)" href="#">
+                                <img v-if="item.picture" :src="item.picture.url" class="img-thumbnail img-fluid" alt="">
                                 <h3>{{item.name}}</h3>
                                 <h5>{{item.description}}</h5>
                             </a>

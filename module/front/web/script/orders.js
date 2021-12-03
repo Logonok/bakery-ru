@@ -22,9 +22,6 @@ Vue.component('orders', {
         await this.reload();
     },
     methods: {
-        onOrder (event) {
-            this.toOrder(event.currentTarget.dataset.id);
-        },
         async reload () {
             await this.load(0);
         },

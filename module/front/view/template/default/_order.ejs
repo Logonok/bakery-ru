@@ -40,9 +40,9 @@
                         </div>
                         <div class="col-lg-8">
                             <div class="item-list">
-                                <div v-for="item of items" class="row-item" :data-id="item.id">
+                                <div v-for="item of items" class="row-item">
                                     <div class="order-item-picture cell">
-                                        <img :src="item.picture.url" class="img-fluid img-thumbnail" alt="">
+                                        <img v-if="item.picture" :src="item.picture.url" class="img-fluid img-thumbnail" alt="">
                                     </div>
                                     <div class="order-item-name cell">
                                         <label>Название</label>
@@ -61,8 +61,7 @@
                                         <div class="value">{{item.quantity}}</div>
                                     </div>
                                     <div v-if="isDraft" class="order-item-delete cell">
-                                        <button @click="onDeleteItem" :data-id="item.id" type="button"
-                                                class="btn-outline-danger btn-sm btn">
+                                        <button @click="onDeleteItem(item.id)" type="button" class="btn-outline-danger btn-sm btn">
                                             <i class="far fa-trash-alt"></i>
                                         </button>
                                     </div>

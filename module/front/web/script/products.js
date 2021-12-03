@@ -23,9 +23,6 @@ Vue.component('products', {
         await this.load(0);
     },
     methods: {
-        onProduct (event) {
-            this.toProduct(event.currentTarget.dataset.id);
-        },
         async load (page) {
             const data = await this.fetchJson('list', {
                 class: 'product',

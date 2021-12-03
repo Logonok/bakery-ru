@@ -72,8 +72,8 @@ Vue.component('order', {
                 this.showError(err);
             }
         },
-        onDeleteItem (event) {
-            this.deleteItem(event.currentTarget.dataset.id);
+        onDeleteItem (id) {
+            this.deleteItem(id);
         },
         async deleteItem (id) {
             await Jam.dialog.confirmDeletion('Удалить этот элемент из заказа?');
