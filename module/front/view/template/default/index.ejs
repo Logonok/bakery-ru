@@ -26,17 +26,17 @@ const user = _controller.user;
 <%- include('./_products') %>
 
 <div class="signboard alert-warning alert">
-    Модуль демонстрирует доступ к функционалу и данным приложения через AJAX-запросы
+  Модуль демонстрирует доступ к функционалу и данным приложения через AJAX-запросы
 </div>
 
 <div id="front"
-     data-user-id="<%- user.getId() %>"
-     data-auth-url="<%- _url('/auth/sign-in?returnUrl=/front') %>"
-     data-data-url="<%- _url('/api/base/data') %>"
-     data-thumbnail-url="<%- _url('/api/base/file/thumbnail') %>?c=picture"
-     data-csrf="<%- _controller.getCsrfToken() %>">
+   data-user-id="<%- user.getId() %>"
+   data-auth-url="<%- _url('/auth/sign-in?returnUrl=/front') %>"
+   data-data-url="<%- _url('/api/base/data') %>"
+   data-thumbnail-url="<%- _url('/api/base/file/thumbnail') %>?c=picture"
+   data-csrf="<%- _controller.getCsrfToken() %>">
 
-    <keep-alive include="products">
-        <component :is="activePage" v-bind="activePageProps"></component>
-    </keep-alive>
+  <keep-alive include="products">
+    <component :is="activePage" v-bind="activePageProps"></component>
+  </keep-alive>
 </div>

@@ -68,9 +68,9 @@ Vue.component('product', {
         },
         async createOrderItem (order) {
             const data = {
-                product: {links: this.id},
+                product: this.id,
                 quantity: this.quantity,
-                ingredients: {links: this.getSelectedIngredients()}
+                ingredients: this.getSelectedIngredients()
             };
             const master = {
                 class: 'order',
