@@ -1,74 +1,74 @@
 <template id="product">
-    <div class="page">
-        <div class="product-model">
+  <div class="page">
+    <div class="product-model">
 
-            <breadcrumbs>
-                <template #path>
-                    <li class="breadcrumb-item"><a @click.prevent="toProducts" href="#">Главная</a></li>
-                    <li class="breadcrumb-item">Продукт</li>
-                </template>
-            </breadcrumbs>
+      <breadcrumbs>
+        <template #path>
+          <li class="breadcrumb-item"><a @click.prevent="toProducts" href="#">Главная</a></li>
+          <li class="breadcrumb-item">Продукт</li>
+        </template>
+      </breadcrumbs>
 
-            <div class="loadable-container">
-                <div v-show="!loading" class="loadable-content">
+      <div class="loadable-container">
+        <div v-show="!loading" class="loadable-content">
 
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <h1 class="product-title">{{name}}</h1>
-                            <h4 class="product-description">{{description}}</h4>
-                            <hr>
-                            <div class="row mb-4">
-                                <div class="col-sm-6"><h5>В запасе - {{stock}}</h5></div>
-                                <div class="col-sm-6"><h5>Базовая цена - {{price}}</h5></div>
-                            </div>
-                            <div class="row mb-4">
-                                <label class="col-form-label col-lg-4">Заказываемое количество</label>
-                                <div class="col-lg-8">
-                                    <input v-model.number="quantity" type="number" class="form-control" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-4">
-                            <img :src="picture?.url" class="img-thumbnail img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <ingredient-group
-                            ref="requiredGroup"
-                            title="Обязательные ингредиенты"
-                            :items="requiredIngredientLists"
-                            :required="true"
-                            @change-ingredient="onChangeRequiredIngredient"
-                    ></ingredient-group>
-
-                    <ingredient-group
-                            ref="optionalGroup"
-                            title="Дополнительные ингредиенты"
-                            :items="optionalIngredientLists"
-                            :required="false"
-                            @change-ingredient="onChangeOptionalIngredient"
-                    ></ingredient-group>
-
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="row mb-4">
-                                <label class="col-form-label col-3">Общая цена</label>
-                                <div class="col-9">
-                                    <p class="form-control-plaintext"><b>{{totalPrice}}</b></p>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="offset-3">
-                                    <button @click="onOrder" type="button" class="btn-success btn">Заказать</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <div class="row">
+            <div class="col-lg-8">
+              <h1 class="product-title">{{name}}</h1>
+              <h4 class="product-description">{{description}}</h4>
+              <hr>
+              <div class="row mb-4">
+                <div class="col-sm-6"><h5>В запасе - {{stock}}</h5></div>
+                <div class="col-sm-6"><h5>Базовая цена - {{price}}</h5></div>
+              </div>
+              <div class="row mb-4">
+                <label class="col-form-label col-lg-4">Заказываемое количество</label>
+                <div class="col-lg-8">
+                  <input v-model.number="quantity" type="number" class="form-control" required>
                 </div>
-                <div v-show="loading" class="loader">
-                    <i class="fa fa-spinner fa-spin"></i>
-                </div>
+              </div>
             </div>
+            <div class="col-lg-4 mb-4">
+              <img :src="picture?.url" class="img-thumbnail img-fluid" alt="">
+            </div>
+          </div>
+
+          <ingredient-group
+              ref="requiredGroup"
+              title="Обязательные ингредиенты"
+              :items="requiredIngredientLists"
+              :required="true"
+              @change-ingredient="onChangeRequiredIngredient"
+          ></ingredient-group>
+
+          <ingredient-group
+              ref="optionalGroup"
+              title="Дополнительные ингредиенты"
+              :items="optionalIngredientLists"
+              :required="false"
+              @change-ingredient="onChangeOptionalIngredient"
+          ></ingredient-group>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="row mb-4">
+                <label class="col-form-label col-3">Общая цена</label>
+                <div class="col-9">
+                  <p class="form-control-plaintext"><b>{{totalPrice}}</b></p>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-3">
+                  <button @click="onOrder" type="button" class="btn-success btn">Заказать</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div v-show="loading" class="loader">
+          <i class="fa fa-spinner fa-spin"></i>
+        </div>
+      </div>
     </div>
+  </div>
 </template>

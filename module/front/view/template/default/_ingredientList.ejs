@@ -1,33 +1,33 @@
 <template id="ingredient-list">
-    <div v-if="items.length" class="col-lg-6">
-        <div class="ingredient-list">
-            <h5 class="ingredient-list-head">{{title}}</h5>
-            <div class="ingredient-list-body">
-                <div v-if="!required" class="ingredient-item row-item">
-                    <div class="ingredient-item-radio cell">
-                        <label>
-                            <input type="radio" v-model="selected" :name="id" value="" checked>
-                            Не выбрано
-                        </label>
-                    </div>
-                </div>
-                <div v-for="item in items" :key="item.id" class="ingredient-item row-item">
-                    <div class="ingredient-item-radio cell">
-                        <label>
-                            <input type="radio" v-model="selected" :name="id" :value="item.id">
-                            <b>{{item.name}}</b>
-                        </label>
-                    </div>
-                    <div class="ingredient-item-stock cell">
-                        <div class="label">Запас</div>
-                        <div class="value">{{item.stock}}</div>
-                    </div>
-                    <div class="ingredient-item-price cell">
-                        <div class="label">Цена</div>
-                        <div class="value">{{item.price}}</div>
-                    </div>
-                </div>
-            </div>
+  <div v-if="items.length" class="col-lg-6">
+    <div class="ingredient-list">
+      <h5 class="ingredient-list-head">{{title}}</h5>
+      <div class="ingredient-list-body">
+        <div v-if="!required" class="ingredient-item row-item">
+          <div class="ingredient-item-radio cell">
+            <label>
+              <input type="radio" v-model="selected" :name="id" value="" checked>
+              Не выбрано
+            </label>
+          </div>
         </div>
+        <div v-for="item in items" :key="item.id" class="ingredient-item row-item">
+          <div class="ingredient-item-radio cell">
+            <label>
+              <input type="radio" v-model="selected" :name="id" :value="item.id">
+              <b>{{item.name}}</b>
+            </label>
+          </div>
+          <div class="ingredient-item-stock cell">
+            <div class="label">Запас</div>
+            <div class="value">{{item.stock}}</div>
+          </div>
+          <div class="ingredient-item-price cell">
+            <div class="label">Цена</div>
+            <div class="value">{{item.price}}</div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </template>

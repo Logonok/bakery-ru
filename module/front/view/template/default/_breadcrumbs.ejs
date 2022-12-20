@@ -1,15 +1,15 @@
 <template id="breadcrumbs">
-    <div class="page-head">
+  <div class="page-head">
 
-        <ol class="breadcrumb">
-            <slot name="path">
-                <li class="breadcrumb-item">Главная</li>
-            </slot>
-        </ol>
+    <ol class="breadcrumb">
+      <slot name="path">
+        <li class="breadcrumb-item">Главная</li>
+      </slot>
+    </ol>
 
-        <div @click="toOrders" class="user-toggle" title="Заказы">
-            <span class="icon fa fa-user me-2"></span>
-            Мои заказы
-        </div>
+    <div @click="toOrders" class="user-toggle" title="Заказы">
+      <span class="icon fa fa-user me-2"></span>
+      Мои заказы
     </div>
+  </div>
 </template>

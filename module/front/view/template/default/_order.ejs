@@ -1,94 +1,94 @@
 <template id="order">
-    <div class="page">
-        <div class="order">
+  <div class="page">
+    <div class="order">
 
-            <breadcrumbs>
-                <template #path>
-                    <li class="breadcrumb-item"><a href="#" @click.prevent="toProducts">Главная</a></li>
-                    <li class="breadcrumb-item"><a href="#" @click.prevent="toOrders">Заказы</a></li>
-                    <li class="breadcrumb-item">#{{id}}</li>
-                </template>
-            </breadcrumbs>
+      <breadcrumbs>
+        <template #path>
+          <li class="breadcrumb-item"><a href="#" @click.prevent="toProducts">Главная</a></li>
+          <li class="breadcrumb-item"><a href="#" @click.prevent="toOrders">Заказы</a></li>
+          <li class="breadcrumb-item">#{{id}}</li>
+        </template>
+      </breadcrumbs>
 
-            <div class="loadable-container">
-                <div  v-show="!loading" class="loadable-content">
+      <div class="loadable-container">
+        <div  v-show="!loading" class="loadable-content">
 
-                    <h1>Заказ #{{id}}</h1>
+          <h1>Заказ #{{id}}</h1>
 
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="form mb-4">
-                                <div class="form-group row">
-                                    <label class="col-4 col-form-label">Состояние</label>
-                                    <div class="col-8">
-                                        <div class="form-control-plaintext">{{stateTitle}}</div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-4 col-form-label">Цена</label>
-                                    <div class="col-8">
-                                        <div class="form-control-plaintext"><b>{{price}}</b></div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-4 col-form-label">Создано</label>
-                                    <div class="col-8">
-                                        <div class="form-control-plaintext">{{date}}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="item-list">
-                                <div v-for="item of items" class="row-item">
-                                    <div class="order-item-picture cell">
-                                        <img v-if="item.picture" :src="item.picture.url" class="img-fluid img-thumbnail" alt="">
-                                    </div>
-                                    <div class="order-item-name cell">
-                                        <label>Название</label>
-                                        <div class="value">
-                                            <b>{{item.name}}</b>
-                                        </div>
-                                    </div>
-                                    <div class="order-item-ingredients cell">
-                                        <label>Ингредиенты</label>
-                                        <div class="value">
-                                            <div v-for="item in item.ingredients">{{item.name}}</div>
-                                        </div>
-                                    </div>
-                                    <div class="order-item-quantity cell">
-                                        <label>Количество</label>
-                                        <div class="value">{{item.quantity}}</div>
-                                    </div>
-                                    <div v-if="isDraft" class="order-item-delete cell">
-                                        <button @click="onDeleteItem(item.id)" type="button" class="btn-outline-danger btn-sm btn">
-                                            <i class="far fa-trash-alt"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center mt-5">
-                        <button v-if="canAddMore()" @click="onAddMore" class="btn-primary btn" type="button">
-                            Добавить ещё
-                        </button>
-                        <button v-if="canConfirm()" @click="onConfirm" class="btn-success btn" type="button">
-                            Подтвердить заказ
-                        </button>
-                        <button v-if="canModify()" @click="onModify" class="btn-primary btn" type="button">
-                            Изменить заказ
-                        </button>
-                        <button v-if="canDelete()" @click="onDelete" class="btn-outline-danger btn" type="button">
-                            Удалить заказ
-                        </button>
-                    </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="form mb-4">
+                <div class="form-group row">
+                  <label class="col-4 col-form-label">Состояние</label>
+                  <div class="col-8">
+                    <div class="form-control-plaintext">{{stateTitle}}</div>
+                  </div>
                 </div>
-
-                <div v-show="loading" class="loader">
-                    <i class="fa fa-spinner fa-spin"></i>
+                <div class="form-group row">
+                  <label class="col-4 col-form-label">Цена</label>
+                  <div class="col-8">
+                    <div class="form-control-plaintext"><b>{{price}}</b></div>
+                  </div>
                 </div>
+                <div class="form-group row">
+                  <label class="col-4 col-form-label">Создано</label>
+                  <div class="col-8">
+                    <div class="form-control-plaintext">{{date}}</div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="col-lg-8">
+              <div class="item-list">
+                <div v-for="item of items" class="row-item">
+                  <div class="order-item-picture cell">
+                    <img v-if="item.picture" :src="item.picture.url" class="img-fluid img-thumbnail" alt="">
+                  </div>
+                  <div class="order-item-name cell">
+                    <label>Название</label>
+                    <div class="value">
+                      <b>{{item.name}}</b>
+                    </div>
+                  </div>
+                  <div class="order-item-ingredients cell">
+                    <label>Ингредиенты</label>
+                    <div class="value">
+                      <div v-for="item in item.ingredients">{{item.name}}</div>
+                    </div>
+                  </div>
+                  <div class="order-item-quantity cell">
+                    <label>Количество</label>
+                    <div class="value">{{item.quantity}}</div>
+                  </div>
+                  <div v-if="isDraft" class="order-item-delete cell">
+                    <button @click="onDeleteItem(item.id)" type="button" class="btn-outline-danger btn-sm btn">
+                      <i class="far fa-trash-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-5">
+            <button v-if="canAddMore()" @click="onAddMore" class="btn-primary btn" type="button">
+              Добавить ещё
+            </button>
+            <button v-if="canConfirm()" @click="onConfirm" class="btn-success btn" type="button">
+              Подтвердить заказ
+            </button>
+            <button v-if="canModify()" @click="onModify" class="btn-primary btn" type="button">
+              Изменить заказ
+            </button>
+            <button v-if="canDelete()" @click="onDelete" class="btn-outline-danger btn" type="button">
+              Удалить заказ
+            </button>
+          </div>
         </div>
+
+        <div v-show="loading" class="loader">
+          <i class="fa fa-spinner fa-spin"></i>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
