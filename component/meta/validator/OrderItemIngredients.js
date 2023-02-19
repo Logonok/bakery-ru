@@ -53,7 +53,8 @@ module.exports = class OrderItemIngredientsValidator extends Base {
     getListByIngredient (ingredient, lists) {
         const id = ingredient.getId();
         for (const list of lists) {
-            if (MongoHelper.includes(id, list.get('ingredients'))) {
+            const ingredients = list.get('ingredients');
+            if (MongoHelper.includes(id, ingredients)) {
                 return list;
             }
         }

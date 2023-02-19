@@ -28,7 +28,8 @@ module.exports = class OrderItemValidator extends Base {
     }
 
     getClientMessage () {
-        return this.createClientMessage(this.message, 'Total number of order items is no more than {max}', {
+        const defaults = 'Total number of order items is no more than {max}';
+        return this.createClientMessage(this.message, defaults, {
             max: this.maxItems
         });
     }
