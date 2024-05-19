@@ -24,13 +24,13 @@ Vue.component('products', {
     },
     methods: {
         async load (page) {
+            const {pageSize} = this;
             const data = await this.fetchJson('list', {
                 class: 'product',
                 view: 'publicList',
-                length: this.pageSize,
-                start: page * this.pageSize
+                length: pageSize,
+                start: page * pageSize
             });
-            const pageSize = this.pageSize;
             this.$emit('load', {...data, pageSize, page});
         },
         onLoad ({items}) {

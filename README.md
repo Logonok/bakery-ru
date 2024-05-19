@@ -11,7 +11,7 @@
 ## Типовая установка
 
 #### Необходимое окружение
-- [Node.js](https://nodejs.org) (версия 16)
+- [Node.js](https://nodejs.org) (версия 20)
 - [MongoDB](https://www.mongodb.com/download-center/community) (версия 5)
 
 #### Linux
